@@ -2,6 +2,9 @@
 Node.js / promise-based data provider about name usage of babies born 1880-2014 in the United States of America.
 
 [![NPM version][npm-image]][npm-url]
+[![Downloads][downloads-image]][downloads-url]
+
+
 
 # About
 Built on <a href="https://www.ssa.gov/OACT/babynames/limits.html">the Social Security Adminitration baby names files</a>, usBabyNames.js returns interesting historical data on baby name usage from 1880-2014. With 1,825,433 total entries packaged within a sqlite3 database, each record contains the following:
@@ -83,3 +86,9 @@ Written over a weekend in early 2016, usBabyNames.js was created when Jon Roig (
 
 # To Do
 Maybe add the state by state birth records?
+
+
+[npm-image]: https://img.shields.io/npm/v/usbabynames.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/usbabynames
+[downloads-image]: http://img.shields.io/npm/dm/usbabynames.svg?style=flat-square
+[downloads-url]: https://npmjs.org/package/usbabynames
