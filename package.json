@@ -1,6 +1,6 @@
 {
   "name": "usbabynames",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "Returns data about baby names used in the United States 1880-2014",
   "main": "index.js",
   "scripts": {
@@ -15,6 +15,16 @@
   "directories": {
     "example": "examples"
   },
+  "keywords": [
+    "names",
+    "baby",
+    "census",
+    "history",
+    "socialsecurity",
+    "usgovt",
+    "babynames",
+    "usa"
+  ],
   "devDependencies": {},
   "repository": {
     "type": "git",
