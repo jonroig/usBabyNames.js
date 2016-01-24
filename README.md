@@ -1,5 +1,5 @@
 # usBabyNames.js
-Promise based data about US Baby Names 1880-2014 for Node.js
+Promise based data about US Baby Names born 1880-2014 for Node.js
 
 # About
 Built on <a href="https://www.ssa.gov/OACT/babynames/limits.html">the Social Security Adminitration baby names files</a>, usBabyNames.js returns interesting historical data on baby name usage from 1880-2014. With 1,825,433 total entries packages withing a sqlite3 database, each record contains the following:
