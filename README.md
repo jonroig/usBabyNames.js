@@ -64,9 +64,11 @@ usBabyNames.js returns an array of name objects, which looks like this:
   rank: int,
   rankRange: {start: int, end: int},
   births: int,
-  birthsRange: {start: int, end: int}
+  birthsRange: {start: int, end: int},
+  unique: boolean
 }
 ```
+
 
 # US Baby Names Sqlite3 Database
 I've done all the "hard" work of exporting all the historical United States birth name data from the original files (/raw_name_source) into a sqlite database. 
