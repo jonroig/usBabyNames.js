@@ -2,7 +2,7 @@
 Node.js/ promise-based data about frequencies of name usage for babies born 1880-2014 in the United States of America.
 
 # About
-Built on <a href="https://www.ssa.gov/OACT/babynames/limits.html">the Social Security Adminitration baby names files</a>, usBabyNames.js returns interesting historical data on baby name usage from 1880-2014. With 1,825,433 total entries packages withing a sqlite3 database, each record contains the following:
+Built on <a href="https://www.ssa.gov/OACT/babynames/limits.html">the Social Security Adminitration baby names files</a>, usBabyNames.js returns interesting historical data on baby name usage from 1880-2014. With 1,825,433 total entries packaged within a sqlite3 database, each record contains the following:
 - Name
 - Sex
 - Number of births that year
