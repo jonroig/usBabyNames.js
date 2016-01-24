@@ -31,6 +31,19 @@ var theNames = babyNames.getByName('jon')
 	});
 ```
 
+# Output
+usbabynames returns an array of name objects, which looks like this:
+``` js
+[ 
+	{ id: 784623,
+	name: 'jonathan',
+	sex: 'M',
+	births: 10919,
+	rank: 30,
+	year: 1975 } 
+]
+```
+
 # API
 **.getByName(name)** returns name data for all years for a given name
 
