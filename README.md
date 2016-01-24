@@ -25,14 +25,14 @@ npm install usbabynames --save
 ``` js
 var babyNames = require('usbabynames');
 
-var theNames = babyNames.getByName('jon')
+var theNames = babyNames.getByName('jonathan')
 	.then(function(data){
 		console.log('names=',data)
 	});
 ```
 
 # Output
-usbabynames returns an array of name objects, which looks like this:
+usBabyNames.js returns an array of name objects, which looks like this:
 ``` js
 [ 
 	{ id: 784623,
