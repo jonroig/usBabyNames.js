@@ -1,5 +1,5 @@
 # usBabyNames.js
-Promise based data about US Baby Names born 1880-2014 for Node.js
+Node.js/ promise-based data about frequencies of name usage for babies born 1880-2014 in the United States of America.
 
 # About
 Built on <a href="https://www.ssa.gov/OACT/babynames/limits.html">the Social Security Adminitration baby names files</a>, usBabyNames.js returns interesting historical data on baby name usage from 1880-2014. With 1,825,433 total entries packages withing a sqlite3 database, each record contains the following:
@@ -16,9 +16,14 @@ This allows you to easily do the following:
 - Calculate the percentage of childen named "Jonathan" since 1975
 - Identify naming trends based on real data
 
+# Install
+```
+npm install usbabynames --save
+```
+
 # Usage
 ``` js
-var babyNames = require('usBabyNames');
+var babyNames = require('usbabynames');
 
 var theNames = babyNames.getByName('jon')
 	.then(function(data){
@@ -59,7 +64,7 @@ select * from usNameData WHERE name = 'jonathan' AND year = 1975 and sex = 'M';
 ```
 
 # Why
-Written over a weekend in early 2016, usBabyNames.js was created by Jon Roig (@runnr_az) found existing baby name data websites / apps... to be totally ridiculous. Since all of these other resources build off the same central resource, <a href="https://www.ssa.gov/OACT/babynames/limits.html">the Social Security Adminitration baby names files</a>, and I was parsing the data anyway, I thought it'd be fun to learn how to package the whole thing up as an NPM module for anyone to use in the future.
+Written over a weekend in early 2016, usBabyNames.js was created by Jon Roig (<a href="https://twitter.com/runnr_az">@runnr_az</a>) found existing baby name data websites / apps... to be totally ridiculous. Since all of these other resources build off the same central resource, <a href="https://www.ssa.gov/OACT/babynames/limits.html">the Social Security Adminitration baby names files</a>, and I was parsing the data anyway, I thought it'd be fun to learn how to package the whole thing up as an NPM module for anyone to use in the future.
 
 # To Do
 Maybe add the state by state records?
