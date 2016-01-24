@@ -1,5 +1,5 @@
 {
-  "name": "usbabynames.js",
+  "name": "usbabynames",
   "version": "1.0.0",
   "description": "Returns data about baby names used in the United States 1880-2014",
   "main": "index.js",
