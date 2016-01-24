@@ -9,12 +9,12 @@ Built on <a href="https://www.ssa.gov/OACT/babynames/limits.html">the Social Sec
 - Rank for that year
 
 This allows you to easily do the following:
+- Identify naming trends based on real data
 - See the top 10 names for a year
 - Track the popularity of a name over time
-- Sort by male vs female name usage of a specific name
+- Sort by male vs. female name usage for specific name
 - See the number of children given the name "Jonathan" in 1975
 - Calculate the percentage of childen named "Jonathan" since 1975
-- Identify naming trends based on real data
 
 # Install
 ```
