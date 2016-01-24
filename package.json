@@ -1,5 +1,5 @@
 {
-  "name": "usBabyNames.js",
+  "name": "usbabynames.js",
   "version": "1.0.0",
   "description": "Returns data about baby names used in the United States 1880-2014",
   "main": "index.js",
@@ -7,9 +7,21 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jon Roig (@runnr_az)",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "promise": "^7.1.1",
     "sqlite3": "^3.1.1"
-  }
+  },
+  "directories": {
+    "example": "examples"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonroig/usBabyNames.js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jonroig/usBabyNames.js/issues"
+  },
+  "homepage": "https://github.com/jonroig/usBabyNames.js#readme"
 }
