@@ -1,0 +1,15 @@
+{
+  "name": "usBabyNames.js",
+  "version": "1.0.0",
+  "description": "Returns data about baby names used in the United States 1880-2014",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jon Roig (@runnr_az)",
+  "license": "ISC",
+  "dependencies": {
+    "promise": "^7.1.1",
+    "sqlite3": "^3.1.1"
+  }
+}
