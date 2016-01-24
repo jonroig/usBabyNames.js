@@ -1,4 +1,4 @@
-var babyNames = require('../usBabyNames.js');
+var babyNames = require('usbabynames');
 
 var theNames = babyNames.get({
 		birthsRange: {start: 0, end: 10},

@@ -1,4 +1,4 @@
-var babyNames = require('../usBabyNames.js');
+var babyNames = require('usbabynames');
 
 var theNames = babyNames.getByYear(1975)
 	.then(function(data){
