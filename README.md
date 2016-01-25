@@ -66,7 +66,7 @@ Output from all the functions above looks like this:
 	year: 1975 } 
 ]
 ```
-**getNameRankAndBirthsByYear(name, params)** is useful for creating graphs. Params are:
+**.getNameRankAndBirthsByYear(name, params)** is useful for creating graphs. Params are:
 ```
 {
 	sex: boolean (M/F),
