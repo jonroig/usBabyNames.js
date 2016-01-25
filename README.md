@@ -33,19 +33,6 @@ var theNames = babyNames.getByName('jonathan')
 	});
 ```
 
-# Output
-usBabyNames.js returns an array of name objects, which looks like this:
-``` js
-[ 
-	{ id: 784623,
-	name: 'jonathan',
-	sex: 'M',
-	births: 10919,
-	rank: 30,
-	year: 1975 } 
-]
-```
-
 # API
 **.getByName(name)** returns name data for all years for a given name
 
@@ -68,7 +55,40 @@ usBabyNames.js returns an array of name objects, which looks like this:
   unique: boolean
 }
 ```
-
+Output from all the functions above looks like this:
+``` js
+[ 
+	{ id: 784623,
+	name: 'jonathan',
+	sex: 'M',
+	births: 10919,
+	rank: 30,
+	year: 1975 } 
+]
+```
+**getNameRankAndBirthsByYear(name, params)** is useful for creating graphs. Params are:
+```
+{
+	sex: boolean (M/F),
+	getEmptyYears: boolean (include years even with 0 births)
+}
+```
+Output for .getNameRankAndBirthsByYear("kanye") looks like:
+``` js
+{ '2002': { births: 5, rank: 11584 },
+  '2003': { births: 87, rank: 1491 },
+  '2004': { births: 507, rank: 489 },
+  '2005': { births: 202, rank: 893 },
+  '2006': { births: 101, rank: 1503 },
+  '2007': { births: 53, rank: 2425 },
+  '2008': { births: 81, rank: 1815 },
+  '2009': { births: 64, rank: 2128 },
+  '2010': { births: 30, rank: 3575 },
+  '2011': { births: 35, rank: 3200 },
+  '2012': { births: 34, rank: 3262 },
+  '2013': { births: 40, rank: 2861 },
+  '2014': { births: 22, rank: 4429 } }
+```
 
 # US Baby Names Sqlite3 Database
 I've done all the "hard" work of exporting all the historical United States birth name data from the original files (/raw_name_source) into a sqlite database. 
