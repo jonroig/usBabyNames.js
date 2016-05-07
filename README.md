@@ -97,11 +97,11 @@ Output for .getNameRankAndBirthsByYear("kanye") looks like:
 <a href="https://github.com/jonroig/exampleUsBabyNamesVisualization.js">exampleUsBabyNamesVisualization.js</a>: a really basic example of usBabyNames.js, express.js, and Google charts.js.
 
 # US Baby Names 1880-2015 Sqlite3 Database
-Many people find the US Social Security Administration names files more useful in a sqlite database. If you just want raw access to tables that can be queried in a regular old sql database manner, accessing the database directly is great way to begin slicing and dicing the database entries. To begin, just clone this repository and start querying.
+Many people find the US Social Security Administration names files more useful in a sqlite database. For raw access to sql tables, just clone this repository and start querying.
 
 I've done all the "hard" work of exporting all the historical United States birth name data from the original files (/raw_name_source) into a sqlite database. (It's not a hard thing to do, per se, it's just time consuming to load all the data... like over an hour running full speed ahead on a Macbook Pro with a SSD.) If you're curious how I did it, take a look at sqllite/loader.js. It ain't nothin' fancy. Presumably, it wouldn't be hard to modify it to load yob (year of birth) files into the database of your choice.
 
-The SSA names files are 100% public domain and freely available. Enjoy!
+This database is 100% public domain and freely available for whatever purposes you like. Enjoy! Thanks SSA!
 
 You can access the baby name sqlite database directly from the command line like so:
 ```
