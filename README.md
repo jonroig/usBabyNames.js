@@ -94,7 +94,7 @@ Output for .getNameRankAndBirthsByYear("kanye") looks like:
 ```
 
 # Example Application
-<a href="https://github.com/jonroig/exampleUsBabyNamesVisualization.js">exampleUsBabyNamesVisualization.js</a> is a really basic example of how the output from usBabyNames.js can be used to directly drive a Google Chart in an Express app.
+<a href="https://github.com/jonroig/exampleUsBabyNamesVisualization.js">exampleUsBabyNamesVisualization.js</a>: a really basic example of usBabyNames.js, express.js, and Google charts.js.
 
 # US Baby Names 1880-2015 Sqlite3 Database
 Many people find the US Social Security Administration names files more useful in a sqlite database. If you just want raw access to tables that can be queried in a regular old sql database manner, accessing the database directly is great way to begin slicing and dicing the database entries. To begin, just clone this repository and start querying.
@@ -112,7 +112,9 @@ select * from usNameData WHERE name = 'jonathan' AND year = 1975 AND sex = 'M';
 select * from usNameData WHERE name = 'jonathan' AND sex = 'M' ORDER BY year DESC;
 ```
 
-# Government Fine Print from the Original YOB Source Files
+# Data Source: Government Fine Print
+.. from the Original YOB Source Files:
+
 National Data on the relative frequency of given names in the population of U.S. births where the individual has a Social Security Number
 
 (Tabulated based on Social Security records as of March 8, 2015)
