@@ -3,9 +3,9 @@ Node.js / promise-based data provider about name usage of babies born 1880-2014 
 
 [![NPM version][npm-image]][npm-url]
 # New!
-**2016-05-08**: <a href="https://en.wikipedia.org/wiki/D._Richard_Hipp">Richard Hipp</a> (of SQLite fame) was kind enough to write in and suggest swapping "INT" for "INTEGER" in the sqlite3 creation script. <a href="https://www.sqlite.org/lang_createtable.html#rowid">This makes for a much smaller database</a>. Thanks!
+**2016-05-08**: <a href="https://en.wikipedia.org/wiki/D._Richard_Hipp">Richard Hipp</a> (of SQLite fame) was kind enough to write in and suggest swapping "INTEGER" for "INT" in the sqlite3 creation script. <a href="https://www.sqlite.org/lang_createtable.html#rowid">This makes for a much smaller database</a>. Thanks!
 
-**2016-05-07**: As of May 5th, 2016, the US Social Security Administration has updated their files with 32952 new name entries for the year 2015. We have updated both the Sqlite3 database and the corresponding output accordingly.
+**2016-05-07**: As of May 5th, 2016, the US Social Security Administration has updated their files with <a href="https://www.ssa.gov/OACT/babynames/index.html">32952 new name entries for the year 2015</a>. We have updated both the Sqlite3 database and the corresponding output accordingly.
 
 
 # About
