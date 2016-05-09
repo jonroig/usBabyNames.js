@@ -2,8 +2,10 @@
 Node.js / promise-based data provider about name usage of babies born 1880-2014 in the United States of America.
 
 [![NPM version][npm-image]][npm-url]
-# New!
+# New 2016-05-07!
 As of May 5th, 2016, the US Social Security Administration has updated their files with 32952 new name entries for the year 2015. We have updated both the Sqlite3 database and the corresponding output accordingly.
+# New 2016-05-08!
+<a href="https://twitter.com/drichardhipp">Richard Hipp</a> of SQLite fame, was kind enough to write in and suggest swapping "INT" for "INTEGER" in the sqlite3 creation script. This creates a much smaller database. Thanks!
 
 # About
 Built on <a href="https://www.ssa.gov/OACT/babynames/limits.html">the Social Security Administration baby names files</a>, usBabyNames.js returns interesting historical data on baby name usage from 1880-2015. With almost two million total entries packaged within a sqlite3 database, each record contains the following:
@@ -117,7 +119,7 @@ select * from usNameData WHERE name = 'jonathan' AND sex = 'M' ORDER BY year DES
 
 National Data on the relative frequency of given names in the population of U.S. births where the individual has a Social Security Number
 
-(Tabulated based on Social Security records as of March 8, 2015)
+(Tabulated based on Social Security records as of March 6, 2016)
 
 For each year of birth YYYY after 1879, we created a comma-delimited file called yobYYYY.txt. Each record in the individual annual files has the format "name,sex,number," where name is 2 to 15 characters, sex is M (male) or F (female) and "number" is the number of occurrences of the name. Each file is sorted first on sex and then on number of occurrences in descending order. When there is a tie on the number of occurrences, names are listed in alphabetical order. This sorting makes it easy to determine a name's rank. The first record for each sex has rank 1, the second record for each sex has rank 2, and so forth.
 
