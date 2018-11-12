@@ -1,8 +1,8 @@
 {
   "name": "usbabynames",
   "version": "1.2.0",
-  "description": "Returns data about baby names used in the United States 1880-2015",
-  "main": "index.js",
+  "description": "Returns data about baby names used in the United States 1880-2017",
+  "main": "lib/usBabyNames.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
