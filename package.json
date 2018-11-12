@@ -1,6 +1,6 @@
 {
   "name": "usbabynames",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "Returns data about baby names used in the United States 1880-2015",
   "main": "index.js",
   "scripts": {
@@ -9,8 +9,8 @@
   "author": "Jon Roig (@runnr_az)",
   "license": "MIT",
   "dependencies": {
-    "promise": "^7.1.1",
-    "sqlite3": "^3.1.1"
+    "promise": "^8.0.2",
+    "sqlite3": "^4.0.4"
   },
   "directories": {
     "example": "examples"

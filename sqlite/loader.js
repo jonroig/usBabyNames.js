@@ -9,8 +9,8 @@
 var fs = require('fs');
 var path = require('path');
 var sqlite3 = require('sqlite3').verbose();
-var db = new sqlite3.Database('./sqlite/us-name-data.sqlite');
-var thePath = './raw_name_source';
+var db = new sqlite3.Database('us-name-data.sqlite');
+var thePath = '../raw_name_source';
 
 var outputObject = {};
 
@@ -96,5 +96,3 @@ var theDir = fs.readdir(thePath, function(err, fileNameArray){
 	db.close();
 
 });
-
-
