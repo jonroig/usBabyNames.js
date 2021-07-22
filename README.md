@@ -1,8 +1,10 @@
 # usBabyNames.js
-Node.js / promise-based data provider about name usage of babies born 1880-2027 in the United States of America.
+Node.js / promise-based data provider about name usage of babies born 1880-2020 in the United States of America.
 
 [![NPM version][npm-image]][npm-url]
 # New!
+**2021-07-21**: Updated with the latest baby names... brought the names current to 2020, reloaded the SQL db. That's 100,263 names / 2,019,529 rows of data over 140 years.
+
 **2018-11-12**: Updated with the latest baby names. Fixed some dependency weirdness.
 
 **2016-05-08**: <a href="https://en.wikipedia.org/wiki/D._Richard_Hipp">Richard Hipp</a> (of SQLite fame) was kind enough to write in and suggest swapping "INTEGER" for "INT" in the sqlite3 creation script. <a href="https://www.sqlite.org/lang_createtable.html#rowid">This makes for a much smaller database</a>. Thanks!
@@ -11,7 +13,7 @@ Node.js / promise-based data provider about name usage of babies born 1880-2027 
 
 
 # About
-Built on <a href="https://www.ssa.gov/OACT/babynames/limits.html">the Social Security Administration baby names files</a>, usBabyNames.js returns interesting historical data on baby name usage from 1880-2015. With almost two million total entries packaged within a sqlite3 database, each record contains the following:
+Built on <a href="https://www.ssa.gov/OACT/babynames/limits.html">the Social Security Administration baby names files</a>, usBabyNames.js returns interesting historical data on baby name usage from 1880-2020. With almost two million total entries packaged within a sqlite3 database, each record contains the following:
 - Name
 - Sex
 - Number of births that year
@@ -101,7 +103,7 @@ Output for .getNameRankAndBirthsByYear("kanye") looks like:
 # Example Application
 <a href="https://github.com/jonroig/exampleUsBabyNamesVisualization.js">exampleUsBabyNamesVisualization.js</a>: a really basic example of usBabyNames.js, express.js, and Google charts.js.
 
-# US Baby Names 1880-2015 Sqlite3 Database
+# US Baby Names 1880-2020 Sqlite3 Database
 Many people find the US Social Security Administration names files more useful in a sqlite database. For raw access to sql tables, just clone this repository and start querying.
 
 I've done all the "hard" work of exporting all the historical United States birth name data from the original files (/raw_name_source) into a sqlite database. (It's not a hard thing to do, per se, it's just time consuming to load all the data... like over an hour running full speed ahead on a Macbook Pro with a SSD.) If you're curious how I did it, take a look at sqllite/loader.js. It ain't nothin' fancy. Presumably, it wouldn't be hard to modify it to load yob (year of birth) files into the database of your choice.
