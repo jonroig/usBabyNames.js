@@ -1,9 +1,11 @@
-var babyNames = require('usbabynames');
+const usbabynames = require('../lib/usbabynames');
 
-var theNames = babyNames.get({
+const getByBirthsRange = async () => {
+	const theNames = await usbabynames.get({
 		birthsRange: {start: 0, end: 10},
 		year: 1975
-	})
-	.then(function(data){
-		console.log('names=',data);
-});
+	});
+	console.log('theNames', theNames);
+};
+
+getByBirthsRange();

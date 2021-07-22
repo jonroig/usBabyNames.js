@@ -1,6 +1,8 @@
-var babyNames = require('usbabynames');
+const usbabynames = require('../lib/usbabynames');
 
-var theNames = babyNames.getNameRankAndBirthsByYear('kanye', {sex: 'M', getEmptyYears: true})
-	.then(function(data){
-		console.log('data=',data);
-});
+const getNameRankAndBirths = async () => {
+	const theNames = await usbabynames.getNameRankAndBirthsByYear('kanye', {sex: 'M', getEmptyYears: true});
+	console.log(theNames);
+};
+
+getNameRankAndBirths();

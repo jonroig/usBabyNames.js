@@ -1,6 +1,8 @@
-var babyNames = require('usbabynames');
+const usbabynames = require('../lib/usbabynames');
 
-var theNames = babyNames.get({rankRange: {start: 0, end: 10}})
-	.then(function(data){
-		console.log('names=',data);
-});
+const getByRankRange = async () => {
+	const theNames = await usbabynames.get({rankRange: {start: 0, end: 10}});
+	console.log(theNames);
+};
+
+getByRankRange();

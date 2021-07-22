@@ -1,6 +1,10 @@
-var babyNames = require('usbabynames');
+const usbabynames = require('../lib/usbabynames');
 
-var theNames = babyNames.getByName('jon')
-	.then(function(data){
-		console.log('names=',data);
-});
+const getByName = async () => {
+	const theNames = await usbabynames.getByName('jon');
+	console.log('theNames', theNames);
+};
+
+getByName();
+
+
