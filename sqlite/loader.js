@@ -6,41 +6,41 @@
 
 // this might take awhile to populate the sqlite file
 
-var fs = require('fs');
-var path = require('path');
-var sqlite3 = require('sqlite3').verbose();
-var db = new sqlite3.Database('us-name-data.sqlite');
-var thePath = '../raw_name_source';
+const fs = require('fs');
+const path = require('path');
+const sqlite3 = require('sqlite3').verbose();
+const db = new sqlite3.Database('us-name-data.sqlite');
+const thePath = '../raw_name_source';
 
-var outputObject = {};
+const outputObject = {};
 
 // grab the list of files from the source dir, parse through them
-var theDir = fs.readdir(thePath, function(err, fileNameArray){
+const theDir = fs.readdir(thePath, (err, fileNameArray) => {
 	if (err) {
 		console.log('err=',err);
 		return;
 	}
 
-	for (var x = 0; x < fileNameArray.length; x++) {
-		var theFileName = fileNameArray[x];
+	for (let x = 0; x < fileNameArray.length; x++) {
+		const theFileName = fileNameArray[x];
 
 		// we only wanna parse the yob files
 		if (theFileName.substr(0, 3) == 'yob') {
-			var theYear = theFileName.replace('yob','').replace('.txt','');
+			const theYear = theFileName.replace('yob','').replace('.txt','');
 			console.log('theYear=',theYear);
 
-			var theRawYearData = fs.readFileSync(thePath + '/' + theFileName);
-			var theRawYearDataArray = theRawYearData.toString().split('\r\n');
+			const theRawYearData = fs.readFileSync(thePath + '/' + theFileName);
+			const theRawYearDataArray = theRawYearData.toString().split('\r\n');
 
-			var yearDataArray = [];
-			var sexRank = {M: 0, F: 0}
+			const yearDataArray = [];
+			const sexRank = {M: 0, F: 0}
 
-			for (i = 0; i < theRawYearDataArray.length; i++) {
-				var theNameEntryArray = theRawYearDataArray[i].split(',');
+			for (let i = 0; i < theRawYearDataArray.length; i++) {
+				const theNameEntryArray = theRawYearDataArray[i].split(',');
 
 				sexRank[theNameEntryArray[1]]++;
 
-				var nameEntryOutputObj = {
+				const nameEntryOutputObj = {
 					name: theNameEntryArray[0].toLowerCase(),
 					sex: theNameEntryArray[1],
 					births: theNameEntryArray[2],
@@ -50,7 +50,6 @@ var theDir = fs.readdir(thePath, function(err, fileNameArray){
 				if (theNameEntryArray[0] != '') {
 					yearDataArray.push(nameEntryOutputObj);
 				}
-
 			};
 
 			outputObject[theYear] = yearDataArray;
@@ -61,34 +60,35 @@ var theDir = fs.readdir(thePath, function(err, fileNameArray){
 	// you could do whatever you like with it...
 	// we're just gonna clear the table and insert everything in...
 
-	var insertId = 0;
-	db.serialize(function() {
-		db.run("DELETE FROM usNameData");
-
-		for (var theYear in outputObject) {
+	
+	db.serialize(() => {
+		let insertId = 0;
+		
+		for (let theYear in outputObject) {
 			console.log('Year=',theYear);
 
-			var theYearData = outputObject[theYear];
+			const theYearData = outputObject[theYear];
 			console.log('Number of names=', theYearData.length);
 
-			for (var x = 0; x < theYearData.length; x++) {
+			for (let x = 0; x < theYearData.length; x++) {
+				const sql = `
+					INSERT INTO usNameData 
+					(id, name, sex, births, rank, year)
+					VALUES (?, ?, ?, ?, ?, ?)`;
+				const stmt = db.prepare(sql);
+				
 				insertId++;
-				var theName = theYearData[x].name;
-				var theSex = theYearData[x].sex;
-				var theBirths = theYearData[x].births;
-				var theRank = theYearData[x].rank;
-
-				var sql = 'INSERT INTO usNameData ';
-				sql += ' (id, name, sex, births, rank, year ) ';
-				sql += ' VALUES ';
-				sql += " (" + insertId + ", ";
-				sql += " '" + theName + "', ";
-				sql += " '" + theSex + "', ";
-				sql += theBirths + ', ';
-				sql += theRank + ', ';
-				sql += theYear + ') ';
-
-				db.run(sql);
+				const theName = theYearData[x].name;
+				const theSex = theYearData[x].sex;
+				const theBirths = theYearData[x].births;
+				const theRank = theYearData[x].rank;
+				console.log(insertId, theName, theSex, theBirths, theRank, theYear);
+				try {
+					stmt.run(insertId, theName, theSex, theBirths, theRank, theYear);
+					stmt.finalize();
+				} catch (e) {
+					console.log('error', e);
+				}
 			}
 		}
 	});
