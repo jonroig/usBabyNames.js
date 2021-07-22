@@ -1,5 +1,5 @@
 # usBabyNames.js
-Node.js / promise-based data provider about name usage of babies born 1880-2027 in the United States of America.
+Node.js / promise-based data provider about name usage of babies born 1880-2020 in the United States of America.
 
 [![NPM version][npm-image]][npm-url]
 # New!
