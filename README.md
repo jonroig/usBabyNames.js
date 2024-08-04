@@ -1,7 +1,8 @@
 # usBabyNames.js
 Node.js / promise-based data provider about name usage of babies born 1880-2023 in the United States of America.
 
-[![NPM version][npm-image]][npm-url]
+[![NPM version][npm-image]][npm-url] [![Node.js Package](https://github.com/jonroig/usBabyNames.js/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/jonroig/usBabyNames.js/actions/workflows/npm-publish.yml)
+
 # New!
 **2024-08-03**: Updated: latest names for 2021-2023. We're up to 2,114,982 rows of data, 103,406 rows of names. 
 
