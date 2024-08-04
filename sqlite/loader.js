@@ -1,10 +1,15 @@
-// basic loader for name files from the us census
-// format of each entry is name,sex,number
-// rank is determined by order in the file
+/**
+basic loader for name files from the us census format of each entry
+is name,sex,number rank is determined by order in the file
 
-// uses name files from: https://www.ssa.gov/OACT/babynames/limits.html
+imports files from: https://www.ssa.gov/OACT/babynames/limits.html
 
-// this might take awhile to populate the sqlite file
+run like: node loader.js
+
+You'll need to DELETE the contents of usNameData first
+Also: this might take awhile to populate the sqlite file
+	There's probably a more elegant way of doing this, but 🤷‍♀️ 
+**/
 
 const fs = require('fs');
 const path = require('path');
@@ -92,5 +97,4 @@ const theDir = fs.readdir(thePath, (err, fileNameArray) => {
 	});
 
 	db.close();
-
 });
