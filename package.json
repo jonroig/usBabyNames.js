@@ -9,8 +9,7 @@
   "author": "Jon Roig (@runnr_az)",
   "license": "MIT",
   "dependencies": {
-    "promise": "^8.0.2",
-    "sqlite3": "^4.0.4"
+    "sqlite3": "^5.1.7"
   },
   "directories": {
     "example": "examples"
@@ -25,7 +24,6 @@
     "babynames",
     "usa"
   ],
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jonroig/usBabyNames.js.git"
