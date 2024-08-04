@@ -1,6 +1,6 @@
 {
   "name": "usbabynames",
-  "version": "1.3.1",
+  "version": "1.3.2",
   "description": "Returns data about baby names used in the United States 1880-2021",
   "main": "lib/usBabyNames.js",
   "scripts": {
