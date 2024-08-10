@@ -4,3 +4,4 @@ const getByIdExample = async () => {
 	console.log('theName', theName);
   };
   
+  getByIdExample();
