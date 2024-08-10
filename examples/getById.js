@@ -1,7 +1,7 @@
-const usbabynames = require('../lib/usbabynames');
+const usBabyNames = require('../lib/usBabyNames');
 
 const getByIdExample = async () => {
-	const theName = await usbabynames.getById(790921);
+	const theName = await usBabyNames.getById(790921);
 	console.log('theName', theName);
 }
 

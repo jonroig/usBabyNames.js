@@ -1,8 +1,7 @@
-const usbabynames = require('../lib/usbabynames');
-
-const getNameRankAndBirths = async () => {
-	const theNames = await usbabynames.getNameRankAndBirthsByYear('kanye', {sex: 'M', getEmptyYears: true});
+async function getNameRankAndBirths() {
+	const usBabyNames = await import('../lib/usBabyNames.mjs');
+	const theNames = await usBabyNames.getNameRankAndBirthsByYear('kanye', {sex: 'M', getEmptyYears: true});
 	console.log(theNames);
-};
-
-getNameRankAndBirths();
+  }
+  
+  getNameRankAndBirths();
