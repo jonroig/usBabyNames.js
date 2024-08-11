@@ -6,7 +6,7 @@ Node.js / promise-based data provider about name usage of babies born 1880-2023 
 # New!
 **2024-08-10** Added 115,604 name details including pronunciation / origin / usage / notes. Moved to proper ES6 exports.
 
-**2024-08-03**: Updated: latest names for 2021-2023. We're up to 2,114,982 rows of data, 103,406 rows of names. 
+2024-08-03: Updated: latest names for 2021-2023. We're up to 2,114,982 rows of data, 103,406 rows of names. 
 
 2021-07-21: Updated with the latest baby names... brought the names current to 2020, reloaded the SQL db. That's 100,263 names / 2,019,529 rows of data over 140 years.
 
