@@ -36,19 +36,29 @@ This allows you to easily do the following:
 npm install usbabynames --save
 ```
 
-# Usage
+# Historical Name Data Usage
 ``` js
 const getByName = async () => {
-    const { getByName } = await import('../lib/usBabyNames.mjs');
-    const theNames = await getByName('debbie');
-    console.log('theNames', theNames);
+	const { getByName } = await import('../lib/usBabyNames.mjs');
+	const theNames = await getByName('debbie');
+	console.log('theNames', theNames);
 };
 
 getByName();
-
 ```
 
-# API
+# Name Meaning Usage
+``` js
+const getMeaning = async () => {
+	const usBabyNames = await import('../lib/usBabyNames.mjs');
+	const theMeaning = await usBabyNames.getMeaning('bertha', 'F');
+	console.log('theMeaning', theMeaning);
+  };
+  
+getMeaning();
+```
+
+# Historical Name Data API
 **.getByName(name)** returns name data for all years for a given name
 
 **.getByYear(year)** returns name data for a specific year
@@ -104,6 +114,42 @@ Output for .getNameRankAndBirthsByYear("kanye") looks like:
   '2013': { births: 40, rank: 2861 },
   '2014': { births: 22, rank: 4429 } }
 ```
+
+# Detailed Name Data API
+
+.getMeaning(name, sex) returns advanced data about a given name including pronunciation, country of origin, meaning, and notes.
+``` js
+[
+  {
+    id: 88737,
+    name: 'bertha',
+    sex: 'M',
+    nameData: {
+	"name": "Bertha",
+	"sex": "female",
+	"pronunciation": "/ˈbɜːrθə/",
+	"country": [
+		"Germany",
+			"England"
+	],
+	"meaning": [
+		{
+		"German": "bright one, glorious"
+		}
+	],
+	"notes": "The name Bertha is of Germanic origin, derived from the Old High
+		German word 'beraht', meaning 'bright' or 'glorious'. It has been used since
+		 the Middle Ages, with notable usage recorded in German-speaking regions.
+		Bertha was popular among various European royal families, most famously
+		Bertha of the Merovingians, a Frankish queen in the late 5th century.
+		The name was especially popular in the 19th century in England and
+		Germany, often associated with nobility."
+	}
+  }
+]
+```
+
+
 
 # Example Application
 <a href="https://github.com/jonroig/exampleUsBabyNamesVisualization.js">exampleUsBabyNamesVisualization.js</a>: a really basic example of usBabyNames.js, express.js, and Google charts.js.
