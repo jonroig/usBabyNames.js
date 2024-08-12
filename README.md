@@ -56,11 +56,11 @@ getByName();
 ``` js
 const getDetailed = async () => {
 	const usBabyNames = await import('../lib/usBabyNames.mjs');
-	const theMeaning = await usBabyNames.getDetailed('jonathan', 'M');
+	const theDetails = await usBabyNames.getDetailed('jonathan', 'M');
 	console.log('theDetails', theDetails);
   };
   
-  getDetailed();
+getDetailed();
 ```
 
 # Historical Name Data API
@@ -122,7 +122,7 @@ Output for .getNameRankAndBirthsByYear("kanye") looks like:
 
 # Detailed Name Data API
 
-.getMeaning(name, sex) returns advanced data about a given name including pronunciation, country of origin, meaning, and notes.
+.getDetailed(name, sex) returns advanced data about a given name including pronunciation, country of origin, meaning, and notes.
 ``` js
 [
   {
