@@ -4,7 +4,7 @@ Node.js / promise-based data provider about name usage of babies born 1880-2023 
 [![NPM version][npm-image]][npm-url] [![Node.js Package](https://github.com/jonroig/usBabyNames.js/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/jonroig/usBabyNames.js/actions/workflows/npm-publish.yml)
 
 # New!
-**2024-08-10** Added 115,604 name details including pronunciation / origin / usage / notes. Moved to proper ES6 exports.
+**2024-08-10** Added 115,604 name details including pronunciation / origin / usage / notes. Moved to proper ES6 exports. Also... access the DBs straight fromn JS.
 
 2024-08-03: Updated: latest names for 2021-2023. We're up to 2,114,982 rows of data, 103,406 rows of names. 
 
@@ -154,6 +154,36 @@ Output for .getNameRankAndBirthsByYear("kanye") looks like:
 ]
 ```
 
+# Direct DB Access via JS
+Cut out the middleman and save! usBabyNames exposes the underlying sqliteDBs straight from the library.
+``` js
+const directDbAccess = async () => {
+    const usBabyNamesModule = await import('../lib/usBabyNames.mjs');
+    const nameDataDb = usBabyNamesModule.nameDataDb;
+    const nameDetailsDb = usBabyNamesModule.nameDetailsDb;
+    const nameDetailsSql = "SELECT * from usNameDetails where name = 'jonathan' and sex = 'M' ";
+    nameDetailsDb.all(nameDetailsSql, [], (err, rows) => {
+        if (err) {
+            console.log('err', err);
+            console.log (err);
+        }
+        console.log(rows);
+    });
+
+    const nameDataSql = "SELECT * from usNameData where name = 'jonathan' AND sex = 'M' ORDER BY year DESC limit 10";
+    nameDataDb.all(nameDataSql, [], (err, rows) => {
+        if (err) {
+            console.log('err', err);
+            console.log (err);
+        }
+        console.log(rows);
+    });
+
+
+};
+
+directDbAccess();
+```
 
 
 # Example Application
