@@ -1,8 +1,8 @@
 {
   "name": "usbabynames",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Returns data about baby names used in the United States 1880-2021",
-  "main": "lib/usBabyNames.js",
+  "main": "lib/usBabyNames.mjs",
   "scripts": {
     "test": "echo 'tests?'"
   },
@@ -14,6 +14,7 @@
   "directories": {
     "example": "examples"
   },
+  "type": "module",
   "keywords": [
     "names",
     "baby",
