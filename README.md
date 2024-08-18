@@ -4,7 +4,7 @@ Node.js / promise-based data provider about name usage of babies born 1880-2023 
 [![NPM version][npm-image]][npm-url] [![Node.js Package](https://github.com/jonroig/usBabyNames.js/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/jonroig/usBabyNames.js/actions/workflows/npm-publish.yml)
 
 # New!
-**2024-08-10** Added 115,604 name details including pronunciation / origin / usage / notes. Moved to proper ES6 exports. Also... access the DBs straight fromn JS.
+**2024-08-10** Added 115,604 name details including pronunciation / origin / usage / notes. Moved to proper ES6 exports. Also... access the DBs straight from JS.
 
 2024-08-03: Updated: latest names for 2021-2023. We're up to 2,114,982 rows of data, 103,406 rows of names. 
 
