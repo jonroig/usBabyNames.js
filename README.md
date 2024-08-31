@@ -244,9 +244,6 @@ To safeguard privacy, we restrict our list of names to those with at least 5 occ
 # Why
 Written over a weekend in early 2016, usBabyNames.js was created when Jon Roig (<a href="https://twitter.com/runnr_az">@runnr_az</a>) found existing baby name data websites / apps / etc... to be totally ridiculous. Since all of these other resources build off the same central resource, <a href="https://www.ssa.gov/OACT/babynames/limits.html">the Social Security Administration baby names files</a>, and I was parsing the data anyway, I thought it'd be fun to learn how to package the whole thing up as an NPM module for anyone to use in the future.
 
-# To Do
-Maybe add the state by state birth records?
-
 
 [npm-image]: https://img.shields.io/npm/v/usbabynames.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/usbabynames
