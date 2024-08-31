@@ -4,11 +4,13 @@
   "description": "Returns data about baby names used in the United States 1880-2021",
   "main": "lib/usBabyNames.mjs",
   "scripts": {
-    "test": "echo 'tests?'"
+    "test": "echo 'tests?'",
+    "postinstall": "node unzip.js"
   },
   "author": "Jon Roig (@runnr_az)",
   "license": "MIT",
   "dependencies": {
+    "adm-zip": "^0.5.16",
     "sqlite3": "^5.1.7"
   },
   "directories": {
