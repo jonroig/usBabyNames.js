@@ -1,24 +1,20 @@
 # usBabyNames.js
-Node.js / promise-based data provider about name usage of babies born 1880-2023 in the United States of America.
+NodeJs / SQLite: United States Baby Names. National data: 1880-2023. State data: 1910-2023
 
 [![NPM version][npm-image]][npm-url] [![Node.js Package](https://github.com/jonroig/usBabyNames.js/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/jonroig/usBabyNames.js/actions/workflows/npm-publish.yml)
 
 # New!
+**2024-08-31** Added breakdown by state, 1910-2023. 
+
 **2024-08-10** Added 115,604 name details including pronunciation / origin / usage / notes. Moved to proper ES6 exports. Also... access the DBs straight from JS.
-
-2024-08-03: Updated: latest names for 2021-2023. We're up to 2,114,982 rows of data, 103,406 rows of names. 
-
-2021-07-21: Updated with the latest baby names... brought the names current to 2020, reloaded the SQL db. That's 100,263 names / 2,019,529 rows of data over 140 years.
-
-2018-11-12: Updated with the latest baby names. Fixed some dependency weirdness.
-
-2016-05-08: <a href="https://en.wikipedia.org/wiki/D._Richard_Hipp">Richard Hipp</a> (of SQLite fame) was kind enough to write in and suggest swapping "INTEGER" for "INT" in the sqlite3 creation script. <a href="https://www.sqlite.org/lang_createtable.html#rowid">This makes for a much smaller database</a>. Thanks!
-
-2016-05-07: As of May 5th, 2016, the US Social Security Administration has updated their files with <a href="https://www.ssa.gov/OACT/babynames/index.html">32952 new name entries for the year 2015</a>. We have updated both the Sqlite3 database and the corresponding output accordingly.
 
 
 # About
-Built on <a href="https://www.ssa.gov/OACT/babynames/limits.html">the Social Security Administration baby names files</a>, usBabyNames.js returns interesting historical data on baby name usage from 1880-2023. With almost two million total entries packaged within a sqlite3 database, each record contains the following:
+Built on <a href="https://www.ssa.gov/OACT/babynames/limits.html">the Social Security Administration baby names files</a>, usBabyNames.js returns interesting historical data on baby name usage from 1880-2023. 
+
+**National Data: 1880-2023**
+
+2,114,982 records
 - Name
 - Sex
 - Number of births that year
@@ -27,7 +23,16 @@ Built on <a href="https://www.ssa.gov/OACT/babynames/limits.html">the Social Sec
 - Notes about history and usage
 - Origin
 
-This allows you to easily do the following:
+**State Data: 1910-2023**
+
+6,504,161 records
+- Name
+- Sex
+- Number of births that year
+- Rank
+- State
+
+**Usage**
 - Identify naming trends based on real data
 - See the top 10 names for a year
 - Track the popularity of a name over time
