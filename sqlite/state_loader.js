@@ -61,10 +61,6 @@ const theDir = fs.readdir(thePath, (err, fileNameArray) => {
 			const theState = theFileName.toLowerCase().replace('.txt','');
             
 			console.log('theState=',theState);
-            // if (theState !== 'az') {
-            //     continue;
-            // }
-
 			const theRawStateData = fs.readFileSync(thePath + '/' + theFileName);
 			const theRawStateDataArray = theRawStateData.toString().split('\r\n');
 
@@ -74,7 +70,6 @@ const theDir = fs.readdir(thePath, (err, fileNameArray) => {
 			for (let i = 0; i < theRawStateDataArray.length; i++) {
 				const theNameEntryArray = theRawStateDataArray[i].split(',');
                 if (theNameEntryArray.length > 1) {
-                    // console.log('theNameEntryArray=',theNameEntryArray);
                     if (theYear !== theNameEntryArray[2]) {
                         theYear = theNameEntryArray[2];
                         sexRank = {M: 0, F: 0};
@@ -103,9 +98,7 @@ const theDir = fs.readdir(thePath, (err, fileNameArray) => {
 	}
 
     console.log(outputObject);
-	// at this point you have the complete outputObject...
-	// you could do whatever you like with it...
-	// we're just gonna clear the table and insert everything in...
+
 	db.serialize(async () => {
 		let insertId = 0;
 		

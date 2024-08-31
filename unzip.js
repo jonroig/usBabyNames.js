@@ -1,13 +1,20 @@
 // unpack the state baby name data
-const AdmZip = require('adm-zip');
-const path = require('path');
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 console.log('Unpacking baby names...');
 
-const zipFilePath = path.join(__dirname, 'sqlite', 'state-name-data.sqlite.zip');
-const outputDir = path.join(__dirname, 'output');
+const zipFilePath = join(__dirname, 'sqlite', 'state-name-data.sqlite.zip');
+const outputDir = join(__dirname, 'sqlite');
 
-const zip = new AdmZip(zipFilePath);
-zip.extractAllTo(outputDir, true);
+const unzip = async () => {
+  const { default: AdmZip } = await import('adm-zip');
+  const zip = new AdmZip(zipFilePath);
+  zip.extractAllTo(outputDir, true);
+  console.log('...baby names unpacked');
+};
 
-console.log('...baby names unpacked');
+unzip().catch(console.error);
