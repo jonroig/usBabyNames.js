@@ -1,5 +1,7 @@
+const usBabyNamesModule = await import('../lib/usBabyNames.mjs');
+
 const directDbAccess = async () => {
-    const usBabyNamesModule = await import('../lib/usBabyNames.mjs');
+    
     const nameDataDb = usBabyNamesModule.nameDataDb;
     const nameDetailsDb = usBabyNamesModule.nameDetailsDb;
     const nameDetailsSql = "SELECT * from usNameDetails where name = 'jonathan' and sex = 'm' ";
