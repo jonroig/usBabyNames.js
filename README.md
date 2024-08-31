@@ -1,36 +1,44 @@
 # usBabyNames.js
-NodeJs / SQLite: United States Baby Names. National data: 1880-2023. State data: 1910-2023
+NPM module: JS / SQLite: Historical database of United States baby names
+Source: Social Security card applications US births after 1879 / chatGPT
+National data: 1880-2023
+State data: 1910-2023
+
 
 [![NPM version][npm-image]][npm-url] [![Node.js Package](https://github.com/jonroig/usBabyNames.js/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/jonroig/usBabyNames.js/actions/workflows/npm-publish.yml)
 
 # New!
-**2024-08-31** Added breakdown by state, 1910-2023. 
+**2024-08-31** Added breakdown by state, 1910-2023. 6,504,161 records
 
-**2024-08-10** Added 115,604 name details including pronunciation / origin / usage / notes. Moved to proper ES6 exports. Also... access the DBs straight from JS.
+**2024-08-10** Added 115,604 name details including pronunciation / origin / usage / notes. Moved to proper ES6 exports. Also... access the DBs straight from JS
 
 
 # About
-Built on <a href="https://www.ssa.gov/OACT/babynames/limits.html">the Social Security Administration baby names files</a>, usBabyNames.js returns interesting historical data on baby name usage from 1880-2023. 
+Built on <a href="https://www.ssa.gov/OACT/babynames/limits.html">the Social Security Administration baby names files</a>, usBabyNames.js returns interesting historical data on baby name usage from 1880-2023
 
-**National Data: 1880-2023**
-
-2,114,982 records
+National Data: 1880-2023
+- 2,114,982 records
 - Name
 - Sex
 - Number of births that year
 - Rank for that year
-- Pronunciation
-- Notes about history and usage
-- Origin
-
-**State Data: 1910-2023**
-
-6,504,161 records
+  
+State Data: 1910-2023
+- 6,504,161 records
 - Name
 - Sex
 - Number of births that year
 - Rank
 - State
+
+Name Details
+- 115,263 records
+- Name
+- Sex
+- Pronunciation
+- Country of Origin
+- Meaning
+- Historical notes
 
 **Usage**
 - Identify naming trends based on real data
