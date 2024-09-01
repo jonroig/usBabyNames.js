@@ -4,7 +4,7 @@
   "description": "Returns data about baby names used in the United States 1880-2021",
   "main": "lib/usBabyNames.mjs",
   "scripts": {
-    "test": "echo 'tests?'",
+    "test": "NODE_OPTIONS=--experimental-vm-modules npx jest",
     "postinstall": "node unzip.js"
   },
   "author": "Jon Roig (@runnr_az)",
@@ -34,5 +34,10 @@
   "bugs": {
     "url": "https://github.com/jonroig/usBabyNames.js/issues"
   },
-  "homepage": "https://github.com/jonroig/usBabyNames.js#readme"
+  "homepage": "https://github.com/jonroig/usBabyNames.js#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.25.4",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0"
+  }
 }
