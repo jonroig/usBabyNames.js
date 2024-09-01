@@ -1,16 +1,10 @@
 # usBabyNames.js
+[![NPM version][npm-image]][npm-url] [![Node.js Package](https://github.com/jonroig/usBabyNames.js/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/jonroig/usBabyNames.js/actions/workflows/npm-publish.yml)
+
 NPM module: JS / SQLite: Historical database of United States baby names
 Source: Social Security card applications US births after 1879 / chatGPT
 National data: 1880-2023
 State data: 1910-2023
-
-
-[![NPM version][npm-image]][npm-url] [![Node.js Package](https://github.com/jonroig/usBabyNames.js/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/jonroig/usBabyNames.js/actions/workflows/npm-publish.yml)
-
-# New!
-**2024-08-31** Added breakdown by state, 1910-2023. 6,504,161 records
-
-**2024-08-10** Added 115,604 name details including pronunciation / origin / usage / notes. Moved to proper ES6 exports. Also... access the DBs straight from JS
 
 
 # About
@@ -49,6 +43,7 @@ Name Details
 - Calculate the percentage of childen named "Jonathan" since 1975
 - Whatever you want, really. Slice and dice however you like
 
+
 # Install
 ```
 npm install usbabynames --save
@@ -64,6 +59,7 @@ const getByName = async () => {
 
 getByName();
 ```
+
 
 # Name Details Usage
 ``` js
