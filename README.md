@@ -1,10 +1,14 @@
-# usBabyNames.js
-[![NPM version][npm-image]][npm-url] [![Node.js Package](https://github.com/jonroig/usBabyNames.js/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/jonroig/usBabyNames.js/actions/workflows/npm-publish.yml)
+# usBabyNames.js: NPM / JS / SQLite: United States Baby Name Data
+[![NPM version][npm-image]][npm-url]
+&nbsp;&nbsp;[![Node.js CI](https://github.com/jonroig/usBabyNames.js/actions/workflows/node.js.yml/badge.svg?branch=master)](https://github.com/jonroig/usBabyNames.js/actions/workflows/node.js.yml)
 
-NPM module: JS / SQLite: Historical database of United States baby names
-Source: Social Security card applications US births after 1879 / chatGPT
-National data: 1880-2023
-State data: 1910-2023
+
+Historical database of United States baby names
+- NPM module
+- Promise-based archictecture / direct db access
+- Source: Social Security card applications US births after 1879 / chatGPT
+- National data: 1880-2023
+- State data: 1910-2023
 
 
 # About
