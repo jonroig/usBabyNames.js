@@ -1,7 +1,7 @@
 {
   "name": "usbabynames",
-  "version": "2.1.2",
-  "description": "Returns data about baby names used in the United States 1880-2021",
+  "version": "2.2.0",
+  "description": "United States baby names database, 1880-2024",
   "main": "lib/usBabyNames.mjs",
   "scripts": {
     "test": "NODE_OPTIONS=--experimental-vm-modules npx jest",
@@ -21,7 +21,7 @@
     "names",
     "baby",
     "census",
-    "history",
+    "sqlite",
     "socialsecurity",
     "usgovt",
     "babynames",
