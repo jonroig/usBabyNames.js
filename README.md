@@ -12,9 +12,9 @@ Historical database of United States baby names
 
 
 # About
-Built on <a href="https://www.ssa.gov/OACT/babynames/limits.html">the Social Security Administration baby names files</a>, usBabyNames.js returns interesting historical data on baby name usage from 1880-2023
+Built on <a href="https://www.ssa.gov/OACT/babynames/limits.html">the Social Security Administration baby names files</a>, usBabyNames.js returns interesting historical data on baby name usage from 1880-2024
 
-National Data: 1880-2023
+National Data: 1880-2024
 - 2,114,982 records
 - Name
 - Sex
@@ -202,7 +202,7 @@ directDbAccess();
 # Example Application
 <a href="https://github.com/jonroig/exampleUsBabyNamesVisualization.js">exampleUsBabyNamesVisualization.js</a>: a really basic example of usBabyNames.js, express.js, and Google charts.js.
 
-# US Baby Names 1880-2023 Sqlite3 DB
+# US Baby Names 1880-2024 Sqlite3 DB
 Public domain.
 
 Many people find the US Social Security Administration names files more useful in a sqlite database. For raw access to sql tables, just clone this repository and start querying.
@@ -242,7 +242,7 @@ For each year of birth YYYY after 1879, we created a comma-delimited file called
 To safeguard privacy, we restrict our list of names to those with at least 5 occurrences.
 
 # Why
-Written over a weekend in early 2016, usBabyNames.js was created when Jon Roig (<a href="https://twitter.com/runnr_az">@runnr_az</a>) found existing baby name data websites / apps / etc... to be totally ridiculous. Since all of these other resources build off the same central resource, <a href="https://www.ssa.gov/OACT/babynames/limits.html">the Social Security Administration baby names files</a>, and I was parsing the data anyway, I thought it'd be fun to learn how to package the whole thing up as an NPM module for anyone to use in the future.
+Obviously, as a developer, I needed to make good, data driven decision about what to name my son. Written over a weekend in early 2016, usBabyNames.js was created when Jon Roig (<a href="https://twitter.com/runnr_az">@runnr_az</a>) found existing baby name data websites / apps / etc... to be totally ridiculous. Since all of these other resources build off the same central resource, <a href="https://www.ssa.gov/OACT/babynames/limits.html">the Social Security Administration baby names files</a>, and I was parsing the data anyway, I thought it'd be fun to learn how to package the whole thing up as an NPM module for anyone to use in the future.
 
 
 [npm-image]: https://img.shields.io/npm/v/usbabynames.svg?style=flat-square
