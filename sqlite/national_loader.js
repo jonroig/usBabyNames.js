@@ -10,10 +10,9 @@ You'll need to DELETE the contents of us-name-data first
 Also: this might take awhile to populate the sqlite file
 	There's probably a more elegant way of doing this, but 🤷‍♀️ 
 **/
+import fs from 'fs';
+import sqlite3 from 'sqlite3';
 
-const fs = require('fs');
-const path = require('path');
-const sqlite3 = require('sqlite3').verbose();
 const db = new sqlite3.Database('us-name-data.sqlite');
 const thePath = '../raw_name_source';
 

@@ -12,7 +12,6 @@ Also: this might take awhile to populate the sqlite file
 **/
 
 import fs from 'fs';
-import path from 'path';
 import sqlite3 from 'sqlite3';
 
 const db = new sqlite3.Database('state-name-data.sqlite');
