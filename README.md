@@ -7,7 +7,7 @@ Historical database of United States baby names
 - NPM module
 - Promise-based archictecture / direct db access
 - Source: Social Security card applications US births after 1879 / chatGPT
-- National data: 1880-2023
+- National data: 1880-2024
 - State data: 1910-2023
 
 
