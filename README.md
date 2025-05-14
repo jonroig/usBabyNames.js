@@ -15,7 +15,7 @@ Historical database of United States baby names
 Built on <a href="https://www.ssa.gov/OACT/babynames/limits.html">the Social Security Administration baby names files</a>, usBabyNames.js returns interesting historical data on baby name usage from 1880-2024
 
 National Data: 1880-2024
-- 2,114,982 records
+- 2,149,477 records
 - Name
 - Sex
 - Number of births that year
