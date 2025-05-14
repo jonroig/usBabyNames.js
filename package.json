@@ -1,6 +1,6 @@
 {
   "name": "usbabynames",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "description": "United States baby names database, 1880-2024",
   "main": "lib/usBabyNames.mjs",
   "scripts": {
